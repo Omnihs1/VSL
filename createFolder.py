@@ -1,7 +1,7 @@
 import os
 
-os.chdir("cuong gui\Vietnamese_hand_sign-main")
-folder_path = 'vietnamese_hand_sign\classes_point_2'  # Đường dẫn tới thư mục xác định
+os.chdir("code chinh\Vietnamese_hand_sign-main")
+folder_path = 'hoang\Point'  # Đường dẫn tới thư mục xác định
 alphabet = "alphabet.txt"
 
 with open(alphabet, 'r') as file:

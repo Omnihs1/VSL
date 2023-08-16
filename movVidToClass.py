@@ -1,9 +1,9 @@
 import os
 import shutil
 
-os.chdir("cuong gui\Vietnamese_hand_sign-main")
+os.chdir("code chinh\Vietnamese_hand_sign-main")
 # Đường dẫn tới thư mục chứa 10 folder con
-parent_folder_path = 'vietnamese_hand_sign_quan\classes temp'
+parent_folder_path = 'hoang\Video'
 
 # Đường dẫn tới thư mục chứa 10 vid
 video_folder_path = 'Cut data\Cut video'
@@ -15,13 +15,15 @@ print(len(subfolders))
 # Lấy danh sách tất cả các vid trong thư mục vid
 videos = [f for f in os.listdir(video_folder_path) if os.path.isfile(os.path.join(video_folder_path, f))]
 print(len(videos))
-# print(videos[10:18])
-temp_videos = videos[10:18].copy()
-temp_videos[0] = videos[17]
-temp_videos[1:8] = videos[10:17]
-videos[10:18] = temp_videos
+
+
+print(videos[0:8])
+temp_videos = videos[0:8].copy()
+temp_videos[0] = videos[7]
+temp_videos[1:8] = videos[0:7]
+videos[0:8] = temp_videos
+videos[10], videos[11] = videos[11], videos[10]
 videos[20], videos[21] = videos[21], videos[20]
-videos[30], videos[31] = videos[31], videos[30]
 # print(temp_videos)
 # Đảm bảo số lượng folder con và video là như nhau
 if len(subfolders) != len(videos):
@@ -36,3 +38,14 @@ for i in range(len(subfolders)):
     shutil.move(video_path, destination_path)
 
 print("Hoàn thành việc di chuyển video vào các thư mục con!")
+
+
+
+
+
+
+
+
+
+
+
